@@ -9,16 +9,16 @@ let newInventoryYearBuilt = [1922, 2011, 1975, 2002, 1965, 1951]
 //and see if the car type is equal to "S1". If it is, increment the typeS1Count variable by one. Outside 
 //the loop, log "Number of S1 Cars is:" and then the value of the typeS1Count variable. Hint: You will need
 // to make an if statment inside your loop!
-let typeS1Count=0
-let i=0
-while(i<newInventoryCarModels.length){
-    console.log(newInventoryCarModels[i])
-    if(newInventoryCarModels[i]==='S1'){
-        typeS1Count++
+let typeS1Count=0       //initialize the variable typeS1count so we can keep track of all future S1 cars
+let i=0                    //initialize i so we can use in while loop
+while(i<newInventoryCarModels.length){  //while loop use the i < the length of models to go through this array
+    console.log(newInventoryCarModels[i])   //prints out each car model in order as the array above
+    if(newInventoryCarModels[i]==='S1'){    //if the model in array == S1 
+        typeS1Count++                       //then we add 1 to typeS1count to keep track
     }
-    i++
+    i++                                    //now move on to text item in array newInventoryCarModels
 }
-console.log("Number of S1 Cars is:", typeS1Count)
+console.log("Number of S1 Cars is:", typeS1Count) //put this outside the loop so it doesnt reprint 6 times
 
 //Write another loop but this time use a for loop. Remember, we are just using the loops to iterate through 
 //an array. We can use either type and accomplish the same objective. Outside of this second loop, make a 
@@ -45,3 +45,11 @@ for(let y=0; y<newInventoryYearBuilt.length;y++){
     sum += (age - newInventoryYearBuilt[y])
 }
 console.log("Average (age) Year of vehicles is :" , sum / newInventoryYearBuilt.length , "years")
+
+
+
+//trying out arrow function for fun 
+const sayHello = () => {
+    console.log("helloworld")
+}
+sayHello()
